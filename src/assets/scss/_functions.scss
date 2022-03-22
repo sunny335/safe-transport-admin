@@ -1,0 +1,39 @@
+//
+// Rem Calculator
+//
+
+@function rem($size) {
+  $rem: $size / 16;
+  @return #{$rem}rem;
+}
+
+@function px($size) {
+  $px: strip-units($size) * 16;
+  @return #{$px}px;
+}
+
+// removing "px" or "rem" from variable
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// scss variable turn into css variable
+@function variable-name($name) {
+  @return var(--#{$variable-prefix}#{$name});
+}
+
+// scss variable conver into css variable
+@function css-variable($values) {
+  $colorsmerge: ();
+
+  @each $name, $value in $values {
+    $colorsmerge: map-merge(
+      $colorsmerge,
+      (
+        $name: var(--#{$variable-prefix}#{$name}),
+      )
+    );
+  }
+
+  @return $colorsmerge;
+}

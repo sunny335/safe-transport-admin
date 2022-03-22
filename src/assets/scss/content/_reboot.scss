@@ -1,0 +1,84 @@
+body {
+  background: var(--#{$variable-prefix}body-bg);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.link {
+  text-decoration: none;
+  color: grey;
+}
+
+.button {
+  /* background-color:#5ab7d6; */
+  background: linear-gradient(to right, rgb(60, 221, 159), rgb(22, 205, 211));
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.button:active {
+  background: #4cc2e9;
+}
+.color {
+  color: #312e49;
+  color: #696969;
+}
+
+p {
+  font-family: arial;
+  color: #757375;
+}
+small {
+  color: #757375;
+}
+.brand-text {
+  color: rgb(28, 199, 193);
+}
+.secondary-text {
+  color: #757375;
+}
+
+.my-input {
+  border: none;
+  outline: none;
+  width: 450px;
+  border: 1px solid lightgray;
+  height: 30px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+.my-input:focus {
+  outline: 1px solid #4cc2e9;
+}
+
+.my-textarea {
+  border: none;
+  outline: none;
+  width: 450px;
+  border: 1px solid lightgray;
+  height: 100px;
+  padding: 10px 20px 10px;
+  margin-bottom: 10px;
+}
+.my-textarea:focus {
+  outline: 1px solid #4cc2e9;
+}
+.f {
+  color: rgb(52, 189, 93);
+}

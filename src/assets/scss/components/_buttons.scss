@@ -1,0 +1,30 @@
+// Social buttons
+
+@each $color, $value in $socials {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $socials {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+.button {
+  background: linear-gradient(90deg, #3cdd9f, #16cdd3);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:active {
+    :active {
+      background: #4cc2e9;
+    }
+  }
+}

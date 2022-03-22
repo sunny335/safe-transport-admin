@@ -1,0 +1,36 @@
+@import '~bootstrap/scss/utilities';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'color': (
+      property: color,
+      class: text,
+      values:
+        map-merge(
+          css-variable($theme-colors),
+          (
+            'white': $white,
+            'body': $body-color,
+            'muted': $text-muted,
+            'black-50': rgba($black, 0.5),
+            'white-50': rgba($white, 0.5),
+            'reset': inherit,
+          )
+        ),
+    ),
+    'background-color': (
+      property: background-color,
+      class: bg,
+      values:
+        map-merge(
+          css-variable($theme-colors),
+          (
+            'body': $body-bg,
+            'white': $white,
+            'transparent': transparent,
+          )
+        ),
+    ),
+  )
+);
