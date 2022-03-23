@@ -1,7 +1,15 @@
 .admin {
-background: linear-gradient(131.85deg, rgba(0, 238, 224, 0.87) 16.97%, rgba(14, 171, 0, 0.93) 75.88%);
+ background-image: url('../../assets//images//safe/authBg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   color: #fff !important;
   display: flex;
   align-items: center;
+}
+.admin-login{
+  border-radius: 15px;
+}
+.admin-button{
+  background: linear-gradient(275.16deg, #00d253 30.41%, #06ede1 101.55%) !important;
 }

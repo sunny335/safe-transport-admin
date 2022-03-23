@@ -11,6 +11,7 @@ import Sidebar from './Sidebar';
 const Dashboard = lazy(() => import('./PostsList'));
 // const Login = lazy(() => import('./Login'));
 const SignUp = lazy(() => import('./SignUp'));
+const PublicsignUp = lazy(() => import('./UserSignUp'));
 // const Applications = lazy(() => import('./Applications'));
 // const ProfileSetting = lazy(() => import('./ProfileSetting'));
 
@@ -58,6 +59,17 @@ const DashboardRoutes = () => {
                 render={(props) =>
                   withTitle({
                     component: Dashboard,
+                    title: 'Employer Dashboard',
+                    ...props,
+                  })
+                }
+              />
+              <Route
+                exact
+                path={`${path}/publicUser`}
+                render={(props) =>
+                  withTitle({
+                    component: PublicsignUp,
                     title: 'Employer Dashboard',
                     ...props,
                   })

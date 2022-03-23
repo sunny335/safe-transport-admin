@@ -25,6 +25,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import Police from '../../../assets/images/safe/Police.png';
 import QrCode from '../../../assets/images/safe/QrCode.png';
+import Manager from '../../../assets/images/safe/Manager.png';
 
 const EmployerSidebar = () => {
   const userauth = useSelector((state) => state.userAuth);
@@ -54,6 +55,16 @@ const EmployerSidebar = () => {
             >
               <img src={Police} alt="Police" />
               Police Registration
+            </NavLink>
+          </ListGroupItem>
+          <ListGroupItem className="border-0 p-0">
+            <NavLink
+              exact
+              to="/dashboard/publicUser"
+              className="text-decoration-none sidebar-navs mx-0 "
+            >
+              <img src={Manager} alt="Police" />
+              All Public Users
             </NavLink>
           </ListGroupItem>
           <ListGroupItem className="border-0 p-0">
