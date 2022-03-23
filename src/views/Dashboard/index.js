@@ -25,17 +25,17 @@ const DashboardRoutes = () => {
     <Layout>
       <Container className="pt-8  dashboard" fluid>
         <Row className="pt-5">
-          <Col lg={2} md={12} sm={12}>
+          <Col lg={2} md={12} sm={12} className="sidebar">
             <Sidebar />
           </Col>
-          <Col lg={10} md={12} sm={12} className="px-4">
+          <Col lg={10} md={12} sm={12} className="px-4 admin-main">
             <Switch>
               <Route
                 exact
                 path={`${path}`}
                 render={(props) =>
                   withTitle({
-                    component: Dashboard,
+                    component: SignUp,
                     title: 'Admin Dashboard',
                     ...props,
                   })
@@ -57,7 +57,7 @@ const DashboardRoutes = () => {
                 path={`${path}/signup`}
                 render={(props) =>
                   withTitle({
-                    component: SignUp,
+                    component: Dashboard,
                     title: 'Employer Dashboard',
                     ...props,
                   })

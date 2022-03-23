@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signout } from '../../actions/auth.actions';
-import Logo from '../../assets/images/safe/Qrbg.png';
+import Logo from '../../assets/images/safe/Safe Transport.png';
 
 const Header = () => {
   const location = useLocation();
@@ -14,8 +14,12 @@ const Header = () => {
   const dispatch = useDispatch();
   const logout = () => {
     dispatch(signout());
+    <Redirect to="/signin" />;
   };
   // console.log('use Auth', userauth);
+  // if (!auth?.user.role == 'admin') {
+  //   return <Redirect to="/signin" />;
+  // }
   const renderLoggedInLinks = () => {
     return (
       <Nav className="d-flex align-items-center">
@@ -37,7 +41,7 @@ const Header = () => {
             className="nav-link"
             onClick={logout}
             style={{ cursor: 'pointer' }}
-            className="bg-primary text-white p-3 py-2"
+            className="log-out-btn text-white p-3 py-2"
           >
             Signout
           </span>
@@ -65,8 +69,8 @@ const Header = () => {
       expand="lg"
       // bg="dark"
       variant=""
-      style={{ zIndex: 1, backgroundColor: '#f5f5f5' }}
-      className="navbar-fixed-top"
+      style={{ zIndex: 1, backgroundColor: '#fff' }}
+      className="navbar-fixed-top px-3"
     >
       <Container fluid className="justify-content-between">
         <img

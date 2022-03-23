@@ -52,6 +52,9 @@ const Signup = () => {
                 </Alert>
               )}
             </Col>
+            <Col>
+              <h1>Admin Login</h1>
+            </Col>
             <Col
               md={{ span: 6, offset: 3 }}
               className="shadow-lg py-5 mt-5 px-5"
