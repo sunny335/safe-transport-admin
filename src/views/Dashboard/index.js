@@ -12,6 +12,7 @@ const Dashboard = lazy(() => import('./PostsList'));
 // const Login = lazy(() => import('./Login'));
 const SignUp = lazy(() => import('./SignUp'));
 const PublicsignUp = lazy(() => import('./UserSignUp'));
+const Allreport = lazy(() => import('./AllReport'));
 // const Applications = lazy(() => import('./Applications'));
 // const ProfileSetting = lazy(() => import('./ProfileSetting'));
 
@@ -71,6 +72,17 @@ const DashboardRoutes = () => {
                   withTitle({
                     component: PublicsignUp,
                     title: 'Employer Dashboard',
+                    ...props,
+                  })
+                }
+              />
+              <Route
+                exact
+                path={`${path}/Allreport`}
+                render={(props) =>
+                  withTitle({
+                    component: Allreport,
+                    title: ' Dashboard',
                     ...props,
                   })
                 }

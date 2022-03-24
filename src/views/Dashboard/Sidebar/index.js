@@ -1,27 +1,13 @@
 import React from 'react';
 import {
   Card,
-  CardImg,
   CardBody,
   CardTitle,
-  CardFooter,
   ListGroup,
   ListGroupItem,
-  Progress,
 } from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faSuitcase,
-  faMobile,
-  faUserPlus,
-  faTag,
-  faTachometerAlt,
-  faEdit,
-  faFile,
-  faPowerOff,
-  faTrashAlt,
-} from '@fortawesome/free-solid-svg-icons';
+
 import { useSelector, useDispatch } from 'react-redux';
 import Police from '../../../assets/images/safe/Police.png';
 import QrCode from '../../../assets/images/safe/QrCode.png';
@@ -67,6 +53,46 @@ const EmployerSidebar = () => {
               All Public Users
             </NavLink>
           </ListGroupItem>
+          <ListGroupItem className="border-0 p-0">
+            <NavLink
+              exact
+              to="/dashboard/Allreport"
+              className="text-decoration-none sidebar-navs mx-0  d-flex align-items-center"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 22 22"
+                fill="none"
+                style={{ marginRight: '20px', marginLeft: '8px' }}
+              >
+                <path
+                  d="M6.86 1H15.14L21 6.86V15.14L15.14 21H6.86L1 15.14V6.86L6.86 1Z"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M11 7V11"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M11 15H11.01"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {/* <img src={Manager} alt="Police" /> */}
+              All Reports
+            </NavLink>
+          </ListGroupItem>
+
           <ListGroupItem className="border-0 p-0">
             <NavLink
               exact
