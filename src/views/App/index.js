@@ -8,21 +8,12 @@ import NotFound from 'src/components/404';
 import withTitle from 'src/components/TitleComponent';
 
 import Signin from 'src//containers/Signin/Signin';
-import Signup from 'src//containers/Signup/Signup';
-import UserSignin from 'src/components/UserSignin';
-import UserSignup from 'src/components/userSignUp';
+
 import userAuthReducer from 'src/reducers/userAuth.reducer';
-// import PostDetails from 'src/components/PostDetails/PostDetails';
-// import SearchProperty from '../SearchProperty';
-// import CreatePost from '../CreatePost';
-// import PropertyDetails from '../PropertyDetails';
-// import ViewProfile from '../ViewProfile';
-// import sellerprofile from '../SellerProfile';
+
 import DashboardRoutes from '../Dashboard';
 import { isUserLoggedIn, isUserFormLoggedIn } from '../../actions';
 // Pages
-const Docs = lazy(() => import('../Documentation'));
-const Home = lazy(() => import('../Home'));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -48,17 +39,6 @@ const App = () => {
         <Router>
           <Switch>
             {/* Page routes */}
-            {/* <Route
-              exact
-              path={['/home', '/user', '/admin', '/']}
-              render={(props) =>
-                withTitle({
-                  component: Home,
-                  title: 'Welcome',
-                  ...props,
-                })
-              }
-            /> */}
 
             {auth?.user.role == 'admin' ? (
               <Route
@@ -84,112 +64,6 @@ const App = () => {
                 }
               />
             )}
-
-            {/* <Route
-              path="/Signup"
-              render={(props) =>
-                withTitle({
-                  component: Signup,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-            {/* <Route
-              path="/userSignup"
-              render={(props) =>
-                withTitle({
-                  component: UserSignup,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-            {/* <Route
-              path="/UserSignin"
-              render={(props) =>
-                withTitle({
-                  component: UserSignin,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-
-            {/* <Route
-              path="/searchProperty"
-              render={(props) =>
-                withTitle({
-                  component: SearchProperty,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-
-            {/* <Route
-              path="/property/:id"
-              render={(props) =>
-                withTitle({
-                  component: PropertyDetails,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-            {/* <Route
-              path="/sellerprofile/:id"
-              render={(props) =>
-                withTitle({
-                  component: sellerprofile,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-
-            {/* <Route
-              path="/createpost"
-              render={(props) =>
-                withTitle({
-                  component: CreatePost,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-            {/* <Route
-              path="/posts/:id"
-              render={(props) =>
-                withTitle({
-                  component: PostDetails,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-            {/* <Route
-              path="/profile"
-              render={(props) =>
-                withTitle({
-                  component: ViewProfile,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
-
-            {/* Doc Page */}
-            {/* <Route
-              path="/docs"
-              render={(props) =>
-                withTitle({
-                  component: Docs,
-                  title: 'Docs',
-                  ...props,
-                })
-              }
-            /> */}
 
             {/* Default 404 */}
             <Route
